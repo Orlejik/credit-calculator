@@ -1,0 +1,182 @@
+<!-- https://mobiasbanca.md/ru/form/calc/credit -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lacquer|Nunito&display=swap" rel="stylesheet">
+    <title>Percent calculator</title>
+</head>
+<body>
+    <h1>Кредитный Калькулятор</h1>
+    <div id="container">
+        <div id="inputsForCredit">
+            <div class="header">
+                <h4 class="calcHeader">
+                    Введите данные o кредите
+                </h4>
+            </div>
+            <div class="hints">
+                <form id="inputs">
+                    <div id="creditType">
+                        <label class="labelsCredit">Тип Кредита:</label>
+                            Обычный
+                    </div>
+                    <div id="amountLine">
+                        <label for="amount" class="labelsCredit">Сумма</label> 
+                        <input type="number" min="100" max="60000" step="1" name="amount" id="moneyAmount">
+                        <span>LEI</span>
+                    </div>
+                    <div id="termen">
+                        <label for="termen" class="labelsCredit">Срок кредита</label>
+                            <select name="termen" id="month">
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                            </select> <label for="month">мес.</label>
+                    </div>
+                    <div id="clientType">
+                        <label for="client" class="labelsCredit">Тип клиента</label>
+                            <select name="client" id="typeOfCredit">
+                                <option value="14">Новый Клиент</option>
+                                <option value="12.6">Клиент с Кредитной Историей</option>
+                                <option value="12.6">Клиент с Зарплатным проектом</option>
+                            </select>
+                    </div>
+                    <div id="firstPay">
+                        <label for="month year" class="labelsCredit">Месяц первой выплаты</label>
+                            <select name="month" id="monthCredit">
+                                <option value="1">Янв</option>
+                                <option value="2">Фев</option>
+                                <option value="3">Мар</option>
+                                <option value="4">Апр</option>
+                                <option value="5">Май</option>
+                                <option value="6">Июн</option>
+                                <option value="7">Июл</option>
+                                <option value="8">Авг</option>
+                                <option value="9">Сен</option>
+                                <option value="10">Окт</option>
+                                <option value="11">Ноя</option>
+                                <option value="12">Дек</option>
+                            </select><select name="year" id="yearCredit">
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                                <option value="2036">2036</option>
+                                <option value="2037">2037</option>
+                                <option value="2038">2038</option>
+                            </select>
+                    </div>
+                    <div id="showPayments">
+                        <input type="checkbox" name="show" id="showMonthPayments">
+                        <label for="show" class="labelsCredit"> Показать месячные выплаты </label>
+                    </div>
+                    <div id="buttonToCalculate">
+                        <input type="button" onclick="getValue()" value="Расcчитать" id="btnToCalculate">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        <div id="creditData">
+            <div class="dataHeader">
+                <h4 class="calcHeader">
+                    Введите данные o кредите
+                </h4>
+            </div>
+            <div class="dataInTable">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Минимальная сумма</th>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <th>Максимальная сумма</th>
+                            <td>60000</td>
+                        </tr>
+                        <tr>
+                            <th>Минимальный срок</th>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <th>Максимальный срок</th>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th>Комиссия за выдачу</th>
+                            <td>2% * значение кредита</td>
+                        </tr>
+                        <tr>
+                            <th>Ежемесячный комиссион</th>
+                            <td>0.35% * значение кредита</td>
+                        </tr>
+                        <tr>
+                            <th>Годовой процент</th>
+                            <td>14%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="aboutClients">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ставка по клиенту</th>
+                        <th>500 - 60000 LEI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Новый Клиент</th>
+                        <td>14%</td>
+                    </tr>
+                    <tr>
+                        <th>Клиент с кредитной историей</th>
+                        <td>12,6</td>
+                    </tr>
+                    <tr>
+                        <th>Клиент с зарплатным проектом</th>
+                        <td>12,6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

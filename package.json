@@ -1,0 +1,23 @@
+{
+  "name": "credit-calculator",
+  "version": "1.0.0",
+  "description": "credit-calculator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orlejik/credit-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orlejik/credit-calculator/issues"
+  },
+  "homepage": "https://github.com/Orlejik/credit-calculator#readme",
+  "dependencies": {
+    "json": "^9.0.6"
+  }
+}

@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: 0px; */
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    padding: 20px 30px;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgray;
+    padding: 20px 15px;
+    font-size: small;
+}
+#inputsForCredit{
+    width: 55%;
+    margin-right: 30px;
+}
+.calcHeader{
+    color: white;
+    background-color: #52ae30;
+    padding: 7px 10px;
+    font-weight: 100;
+    border-radius: 7px 7px 0 0;
+}
+.hints{
+    padding: 10px 0px;
+}
+.labelsCredit{
+    display: inline-block;
+    color: black;
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+#btnToCalculate {
+    padding: 7px 5px;
+    border: none;
+    color: white;
+    background-color: rgb(75, 75, 75);
+}
+input{
+    border: #848484 #c1c1c1 #e1e1e1;;
+}
+
+/* Это для браузера Chrome: */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Это для браузера Firefox: */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/* Для других */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#creditData{
+    width: 42.4%;
+}
+.dataInTable{
+    margin-top: 7px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 30px;
+    font-size: small;
+}
+table th{
+    text-align: left;
+    font-weight: bold;
+}
+#creditData table td{
+    text-align: right;
+    font-size: 13px;
+}
+table tr{
+    border-bottom: 1px solid #c1c1c1;
+}
+#aboutClients{
+    display: block;
+    width: 100%;
+}
+thead{
+    color: white;
+    background-color: #e4022e;
+    text-align: left;
+}
