@@ -104,7 +104,7 @@
                         <label for="show" class="labelsCredit"> Показать месячные выплаты </label>
                     </div>
                     <div id="buttonToCalculate">
-                        <input type="button" onclick="getValue()" value="Расcчитать" id="btnToCalculate">
+                        <input type="button" onclick="calculateTheCredit()" value="Расcчитать" id="btnToCalculate">
                     </div>
                 </form>
             </div>
@@ -175,6 +175,33 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div id="creditDetails">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Общая информация по крудиту</th>
+                        <th style="width: 50%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Сумма месячных выплат:</th>
+                        <td id="monthlyPayments"></td>
+                    </tr>
+                    <tr>
+                        <th>Общая стоимость кредита (Общая сумма процентов + Общая комиссия):</th>
+                        <td id="totalCreditCost"></td>
+                    </tr>
+                    <tr>
+                        <th>Последний месяц выплаты:</th>
+                        <td id="lastMonth"></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
     <script src="./scripts/script.js"></script>
